@@ -296,7 +296,7 @@ body {
 }
 
 .project-card {
-  background-color: white;
+  background-color: var(--card-background);
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -306,7 +306,7 @@ body {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 aspect ratio */
-  background-color: #f3f4f6;
+  background-color: var(--tag-background);
   overflow: hidden;
 }
 
@@ -333,6 +333,7 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  color: var(--text);
 }
 
 .project-description {
