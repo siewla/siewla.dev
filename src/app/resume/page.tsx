@@ -12,8 +12,8 @@ export default function Resume() {
       period: 'November 2021 - Present',
       description: [
         'Architected and implemented a shared private design library, enhancing cross-team collaboration and UI development efficiency',
-        'Spearheaded user experience improvements through innovative feature development in collaboration with product management',
-        'Led MongoDB database optimization initiatives, focusing on collection normalization for enhanced performance',
+        'Made user experience improvements through innovative feature development in collaboration with product management',
+        'Focused onMongoDB database optimization initiatives, focusing on collection normalization for enhanced performance',
         'Championed agile methodologies while delivering high-priority features with consistent quality and timeliness',
         'Established mentorship programs for junior developers, fostering skill development and team growth',
         'Leveraged expertise in TypeScript, ReactJS, Redux, PostgreSQL, MongoDB, and AWS to deliver robust solutions',
@@ -83,10 +83,10 @@ export default function Resume() {
   ];
 
   const skills = {
-    frontend: ['ReactJS', 'Next.js', 'TypeScript', 'JavaScript', 'Redux', 'HTML5', 'CSS3', 'Storybook'],
-    backend: ['Node.js', 'Express', 'Python', 'C++', 'Django', 'RESTful APIs'],
-    database: ['MongoDB', 'PostgreSQL', 'MySQL'],
-    devops: ['AWS', 'CI/CD', 'Docker', 'Git', 'npm', 'Test-Driven Development'],
+    frontend: ['ReactJS', 'Next.js', 'TypeScript', 'JavaScript', 'Redux', 'HTML5', 'CSS3', 'Storybook', 'Material UI', 'Tailwind CSS'],
+    backend: ['Node.js', 'Express', 'Next.js', 'Django', 'RESTful APIs'],
+    database: ['MongoDB', 'PostgreSQL'],
+    devops: ['AWS', 'CI/CD', 'Docker', 'Jenkins', 'ArgoCD', 'Kubernetes'],
     testing: ['Jest', 'React Testing Library', 'Selenium', 'Appium', 'Automated Testing']
   };
 

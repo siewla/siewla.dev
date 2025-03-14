@@ -14,6 +14,12 @@ export default function Home() {
     'Python',
     'Git',
     'RESTful APIs',
+    'Docker',
+    'Kubernetes',
+    'AWS',
+    'CI/CD',
+    'Testing',
+    'Agile',
   ];
 
   return (
@@ -44,7 +50,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="social-link"
               >
-                <FaGithub size={24} />
+                <FaGithub className="contact-icon" size={24} />
               </a>
               <a
                 href="https://www.linkedin.com/in/siewlapang/"
@@ -52,7 +58,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="social-link"
               >
-                <FaLinkedin size={24} />
+                <FaLinkedin className="contact-icon" size={24} />
               </a>
             </div>
           </div>

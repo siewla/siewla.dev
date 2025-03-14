@@ -15,12 +15,46 @@
   --tag-background-dark: #374151;
 }
 
+/* Base Styles */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Theme Settings */
+:root,
+.light {
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --text-secondary: var(--text-secondary-light);
+  --card-background: var(--card-background-light);
+  --border-color: var(--border-color-light);
+  --nav-background: rgba(255, 255, 255, 0.8);
+  --nav-hover: rgba(0, 0, 0, 0.05);
+  --tag-background: var(--tag-background-light);
+}
+
+.dark {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --card-background: var(--card-background-dark);
+  --border-color: var(--border-color-dark);
+  --nav-background: rgba(17, 24, 39, 0.8);
+  --nav-hover: rgba(255, 255, 255, 0.1);
+  --tag-background: var(--tag-background-dark);
+}
+
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -36,39 +70,7 @@
   animation: fadeInUp 0.5s ease-out forwards;
 }
 
-/* Light theme (default) */
-:root,
-.light {
-  --background: var(--background-light);
-  --text: var(--text-light);
-  --text-secondary: var(--text-secondary-light);
-  --card-background: var(--card-background-light);
-  --border-color: var(--border-color-light);
-  --nav-background: rgba(255, 255, 255, 0.8);
-  --nav-hover: rgba(0, 0, 0, 0.05);
-  --tag-background: var(--tag-background-light);
-}
-
-/* Dark theme */
-.dark {
-  --background: var(--background-dark);
-  --text: var(--text-dark);
-  --text-secondary: var(--text-secondary-dark);
-  --card-background: var(--card-background-dark);
-  --border-color: var(--border-color-dark);
-  --nav-background: rgba(17, 24, 39, 0.8);
-  --nav-hover: rgba(255, 255, 255, 0.1);
-  --tag-background: var(--tag-background-dark);
-}
-
-body {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  background-color: var(--background);
-  color: var(--text);
-  height: 100vh;
-  overflow: hidden;
-}
-
+/* Layout */
 .container {
   max-width: 1280px;
   width: 100%;
@@ -79,6 +81,15 @@ body {
   flex-direction: column;
 }
 
+.main {
+  padding-top: 4rem;
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Navigation */
 .nav {
   position: fixed;
   top: 0;
@@ -127,6 +138,7 @@ body {
   background-color: var(--nav-hover);
 }
 
+/* Theme Toggle */
 .theme-toggle {
   background: none;
   border: none;
@@ -144,26 +156,7 @@ body {
   background-color: var(--nav-hover);
 }
 
-.main {
-  padding-top: 4rem;
-  height: calc(100vh - 4rem);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-  height: 100%;
-}
-
-@media (min-width: 768px) {
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* Common Components */
 .button {
   display: inline-flex;
   align-items: center;
@@ -177,7 +170,7 @@ body {
 }
 
 .button:hover {
-  background-color: #4338ca;
+  background-color: var(--primary-color-dark);
 }
 
 .card {
@@ -190,11 +183,13 @@ body {
   flex-direction: column;
 }
 
+/* Typography */
 .heading {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 0.25rem;
   line-height: 1.2;
+  color: var(--text);
 }
 
 .subheading {
@@ -208,86 +203,21 @@ body {
   margin-bottom: 0.75rem;
   line-height: 1.4;
   font-size: 0.95rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-link {
   color: var(--text);
-  transition: color 0.2s;
 }
 
-.social-link:hover {
-  color: var(--primary-color);
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.skills-grid {
+/* Grid Layout */
+.grid {
   display: grid;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.grid-cols-2 {
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  overflow-y: auto;
-  padding-right: 0.5rem;
 }
 
-.skills-grid::-webkit-scrollbar {
-  width: 4px;
-}
-
-.skills-grid::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.skills-grid::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-}
-
-.skill-item {
-  background-color: var(--card-background);
-  color: var(--text);
-  padding: 0.375rem 0.5rem;
-  border-radius: 0.375rem;
-  font-size: 0.875rem;
-}
-
-@media (max-width: 768px) {
-  .grid-cols-2 {
-    grid-template-columns: 1fr;
-  }
-  
-  .profile-image-container {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-  }
-  
-  .about-content {
-    text-align: center;
-    align-items: center;
-  }
-
-  .heading {
-    font-size: 1.5rem;
-  }
-  
-  .subheading {
-    font-size: 1rem;
-  }
-
-  .text {
-    font-size: 0.9rem;
-  }
-}
-
+/* Projects Page */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -305,7 +235,7 @@ body {
 .project-image {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+  padding-top: 56.25%;
   background-color: var(--tag-background);
   overflow: hidden;
 }
@@ -371,19 +301,16 @@ body {
   color: var(--primary-color);
 }
 
-@media (max-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.skills-grid {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
-@media (max-width: 640px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
-/* Resume Page Styles */
+
+/* Resume Page */
 .resume-container {
   max-width: 1280px;
   width: 100%;
@@ -403,10 +330,6 @@ body {
   align-items: center;
   z-index: 10;
   border-bottom: 1px solid var(--border-color);
-}
-
-.resume-header .heading {
-  color: var(--text);
 }
 
 .resume-content {
@@ -430,20 +353,23 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.experience-list, .education-list {
+.experience-list,
+.education-list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.experience-item, .education-item {
+.experience-item,
+.education-item {
   padding: 1rem;
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   background-color: var(--card-background);
 }
 
-.job-title, .school-name {
+.job-title,
+.school-name {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -506,14 +432,6 @@ body {
   gap: 0.5rem;
 }
 
-.skill-tag {
-  padding: 0.25rem 0.75rem;
-  background-color: var(--tag-background);
-  color: var(--text);
-  border-radius: 1rem;
-  font-size: 0.875rem;
-}
-
 .download-button {
   display: flex;
   align-items: center;
@@ -530,25 +448,7 @@ body {
   background-color: var(--primary-color-dark);
 }
 
-/* Custom scrollbar for resume container */
-.resume-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.resume-container::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-.resume-container::-webkit-scrollbar-thumb {
-  background-color: var(--border-color);
-  border-radius: 4px;
-}
-
-.resume-container::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text-secondary);
-}
-
-/* Contact Page Styles */
+/* Contact Page */
 .contact-container {
   max-width: 32rem;
   margin: 0 auto;
@@ -593,6 +493,7 @@ body {
   color: var(--primary-color);
 }
 
+/* About Section */
 .about-content {
   display: flex;
   flex-direction: column;
@@ -619,4 +520,69 @@ body {
 
 .profile-image:hover {
   transform: scale(1.05);
+}
+
+/* Custom Scrollbar */
+.resume-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.resume-container::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+.resume-container::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+
+.resume-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary);
+}
+
+.social-links{
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-image-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
