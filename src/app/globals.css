@@ -390,23 +390,23 @@ body {
   margin: 0 auto;
   height: calc(100vh - 4rem);
   overflow-y: auto;
-  background-color: var(--background-light);
+  background-color: var(--background);
 }
 
 .resume-header {
   position: sticky;
   top: 0;
-  background-color: var(--background-light);
+  background-color: var(--background);
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .resume-header .heading {
-  color: var(--text-light);
+  color: var(--text);
 }
 
 .resume-content {
@@ -421,12 +421,12 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--text-color);
+  color: var(--text);
 }
 
 .summary-text {
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--text);
   margin-bottom: 1.5rem;
 }
 
@@ -447,7 +447,7 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--text-color);
+  color: var(--text);
 }
 
 .company-name {
@@ -465,7 +465,7 @@ body {
 .job-description {
   list-style-type: disc;
   padding-left: 1.5rem;
-  color: var(--text-color);
+  color: var(--text);
 }
 
 .job-description li {
@@ -474,7 +474,7 @@ body {
 }
 
 .education-description {
-  color: var(--text-color);
+  color: var(--text);
   line-height: 1.5;
   margin-top: 0.5rem;
 }
@@ -496,7 +496,7 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--text-color);
+  color: var(--text);
   text-transform: capitalize;
 }
 
@@ -509,7 +509,7 @@ body {
 .skill-tag {
   padding: 0.25rem 0.75rem;
   background-color: var(--tag-background);
-  color: var(--text-color);
+  color: var(--text);
   border-radius: 1rem;
   font-size: 0.875rem;
 }
@@ -536,16 +536,16 @@ body {
 }
 
 .resume-container::-webkit-scrollbar-track {
-  background: var(--background-light);
+  background: var(--background);
 }
 
 .resume-container::-webkit-scrollbar-thumb {
-  background-color: #e5e7eb;
+  background-color: var(--border-color);
   border-radius: 4px;
 }
 
 .resume-container::-webkit-scrollbar-thumb:hover {
-  background-color: #d1d5db;
+  background-color: var(--text-secondary);
 }
 
 /* Contact Page Styles */
