@@ -5,12 +5,11 @@ My personal portfolio website built with Next.js, showcasing my projects and pro
 ## 🚀 Features
 
 - Modern and responsive design
-- Dark mode support
+- Dark/Light mode toggle
 - Project showcase with live demos
 - Downloadable resume
 - Direct contact methods
 - Smooth animations and transitions
-- SEO optimized
 
 ## 🛠️ Tech Stack
 

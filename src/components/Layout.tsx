@@ -2,12 +2,16 @@
 
 import { ReactNode } from 'react';
 import Link from 'next/link';
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { useTheme } from './ThemeProvider';
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const { theme, toggleTheme } = useTheme();
+  
   const navItems = [
     { name: 'About', path: '/' },
     { name: 'Projects', path: '/projects' },
@@ -32,6 +36,13 @@ const Layout = ({ children }: LayoutProps) => {
                 {item.name}
               </Link>
             ))}
+            <button
+              onClick={toggleTheme}
+              className="theme-toggle"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? <FaMoon size={18} /> : <FaSun size={18} />}
+            </button>
           </div>
         </div>
       </nav>
