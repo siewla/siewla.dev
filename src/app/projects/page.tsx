@@ -73,13 +73,12 @@ export default function Projects() {
   return (
     <Layout>
       <div className="container">
-        <h1 className="heading fade-in-up" style={{ animationDelay: '0.1s' }}>Projects</h1>
+        <h1 className="heading">Projects</h1>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="project-card fade-in-up"
-              style={{ animationDelay: `${(index + 1) * 0.1}s` }}
+              className="project-card"
             >
               <div className="project-image">
                 <Image

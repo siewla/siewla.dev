@@ -51,7 +51,7 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
 
-      <footer className="container" style={{ padding: '2rem 0', textAlign: 'center' }}>
+      <footer className="footer">
         <p>© {new Date().getFullYear()} Siew La. All rights reserved.</p>
       </footer>
     </div>

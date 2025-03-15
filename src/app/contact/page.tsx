@@ -5,9 +5,8 @@ export default function Contact() {
   return (
     <Layout>
       <div className="container">
-        <div className="contact-container fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <div className="contact-container">
           <h1 className="heading">Get in Touch</h1>
-
           <div className="contact-methods">
             <div className="contact-item">
               <FaEnvelope className="contact-icon" size={24} />

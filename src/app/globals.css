@@ -27,7 +27,6 @@ body {
   background-color: var(--background);
   color: var(--text);
   height: 100vh;
-  overflow: hidden;
 }
 
 /* Theme Settings */
@@ -54,21 +53,6 @@ body {
   --tag-background: var(--tag-background-dark);
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in-up {
-  /* animation: fadeInUp 1s ease-out forwards; */
-}
 
 /* Layout */
 .container {
@@ -82,11 +66,10 @@ body {
 }
 
 .main {
-  padding-top: 4rem;
-  height: calc(100vh - 4rem);
+  padding-top: 5rem;
+  height: calc(100vh - 5rem - 48px);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 /* Navigation */
@@ -100,13 +83,13 @@ body {
   backdrop-filter: blur(8px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   z-index: 50;
-  height: 4rem;
+  height: 5rem;
 }
 
 .nav-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -545,6 +528,17 @@ body {
   gap: 1rem;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  height: 48px;
+  background-color: var(--background);
+  border-top: 1px solid var(--border-color);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .projects-grid {
@@ -584,5 +578,20 @@ body {
 @media (max-width: 640px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .nav {
+    height: 256px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .main {
+    margin-top: 256px;
+    padding-top: 0;
+    height: calc(100vh - 256px);
   }
 }
