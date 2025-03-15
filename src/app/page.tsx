@@ -26,7 +26,7 @@ export default function Home() {
     <Layout>
       <div className="container">
         <div className="grid grid-cols-2">
-          <div className="fade-in-up about-content" style={{ animationDelay: '0.1s' }}>
+          <div className="about-content">
             <div className="profile-image-container">
               <Image
                 src="/profile.png"
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="fade-in-up card" style={{ animationDelay: '0.3s' }}>
+          <div className="card">
             <h3 className="card-title">Technical Skills</h3>
             <div className="skills-grid">
               {skills.map((skill, index) => (
