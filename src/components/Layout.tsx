@@ -11,7 +11,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const { theme, toggleTheme } = useTheme();
-  
+
   const navItems = [
     { name: 'About', path: '/' },
     { name: 'Projects', path: '/projects' },
@@ -48,9 +48,7 @@ const Layout = ({ children }: LayoutProps) => {
       </nav>
 
       <main className="main">
-        <div className="fade-in-up">
-          {children}
-        </div>
+        {children}
       </main>
 
       <footer className="container" style={{ padding: '2rem 0', textAlign: 'center' }}>

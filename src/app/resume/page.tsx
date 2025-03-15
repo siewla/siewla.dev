@@ -93,7 +93,7 @@ export default function Resume() {
   return (
     <Layout>
       <div className="resume-container">
-        <div className="resume-header fade-in-up" style={{ animationDelay: '0.1s' }}>
+        <div className="resume-header">
           <h1 className="heading">Resume</h1>
           <a href="/siewla-resume.pdf" download className="download-button">
             <FaDownload />
@@ -102,12 +102,12 @@ export default function Resume() {
         </div>
 
         <div className="resume-content">
-          <section className="resume-section fade-in-up" style={{ animationDelay: '0.15s' }}>
+          <section className="resume-section">
             <h2 className="section-title">Professional Summary</h2>
             <p className="summary-text">{summary}</p>
           </section>
 
-          <section className="resume-section fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <section className="resume-section">
             <h2 className="section-title">Experience</h2>
             <div className="experience-list">
               {experience.map((job, index) => (
@@ -125,7 +125,7 @@ export default function Resume() {
             </div>
           </section>
 
-          <section className="resume-section fade-in-up" style={{ animationDelay: '0.3s' }}>
+          <section className="resume-section">
             <h2 className="section-title">Education</h2>
             <div className="education-list">
               {education.map((edu, index) => (
@@ -140,7 +140,7 @@ export default function Resume() {
             </div>
           </section>
 
-          <section className="resume-section fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <section className="resume-section">
             <h2 className="section-title">Technical Skills</h2>
             <div className="skills-container">
               {Object.entries(skills).map(([category, items]) => (
