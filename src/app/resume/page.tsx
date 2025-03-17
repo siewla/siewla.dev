@@ -100,13 +100,11 @@ export default function Resume() {
             <span>Download PDF</span>
           </a>
         </div>
-
         <div className="resume-content">
           <section className="resume-section">
             <h2 className="section-title">Professional Summary</h2>
             <p className="summary-text">{summary}</p>
           </section>
-
           <section className="resume-section">
             <h2 className="section-title">Experience</h2>
             <div className="experience-list">
@@ -139,7 +137,6 @@ export default function Resume() {
               ))}
             </div>
           </section>
-
           <section className="resume-section">
             <h2 className="section-title">Technical Skills</h2>
             <div className="skills-container">

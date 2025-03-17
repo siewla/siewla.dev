@@ -14,6 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   const navItems = [
     { name: 'About', path: '/' },
+    { name: 'Posts', path: '/posts' },
     { name: 'Projects', path: '/projects' },
     { name: 'Resume', path: '/resume' },
     { name: 'Contact', path: '/contact' },
