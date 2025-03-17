@@ -36,10 +36,10 @@ export default function Home() {
                 className="profile-image"
               />
             </div>
-            <h1 className="heading">Hi, I'm Siew La 👋</h1>
+            <h1 className="heading">Hi, I&apos;m Siew La 👋</h1>
             <h2 className="subheading">Full Stack Developer</h2>
             <p className="text">
-              I'm passionate about building web applications and solving complex problems.
+              I&apos;m passionate about building web applications and solving complex problems.
               With experience in both frontend and backend development, I create efficient,
               scalable, and user-friendly solutions.
             </p>

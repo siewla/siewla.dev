@@ -523,7 +523,7 @@ body {
   background-color: var(--text-secondary);
 }
 
-.social-links{
+.social-links {
   display: flex;
   gap: 1rem;
 }
@@ -539,6 +539,147 @@ body {
   border-top: 1px solid var(--border-color);
 }
 
+
+/* posts page */
+.posts-container {
+  width: 45vw;
+  margin: 40px auto;
+}
+
+/* Remove default list styling */
+.posts-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each post item */
+.posts-container li {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0;
+  flex-wrap: nowrap;
+}
+
+/* Create the dotted line between title and date */
+.posts-container li::after {
+  background-image: radial-gradient(circle, currentcolor 1px, transparent 1.5px);
+  background-position: bottom;
+  background-size: 1ex 3.5px;
+  background-repeat: space no-repeat;
+  content: "";
+  flex-grow: 1;
+  height: 1.1em;
+  order: 2;
+  margin: 0 0.5rem;
+}
+
+/* Post year heading */
+.post-year {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Post title styling */
+.post-title {
+  font-weight: 500;
+  order: 1;
+}
+
+/* Link styling */
+.post-title a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-title a:hover {
+  color: #0070f3;
+  /* Next.js blue color */
+  text-decoration: underline;
+}
+
+/* Post date styling */
+.post-date {
+  order: 3;
+  font-size: 0.9rem;
+}
+
+/* Heading style */
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+
+/* Post Layout Styles */
+.post {
+  max-width: 90vw;
+  margin: 40px auto;
+}
+
+.post-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.post-title {}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%
+}
+
+.post-date {
+  margin-right: 1.5rem;
+}
+
+.post-reading-time::before {
+  margin-right: 1.5rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.post-tag {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  cursor: none;
+}
+
+.post-content {
+  padding-top: 16px;
+  padding-bottom: 100px;
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content pre {
+  margin-bottom: 1.5rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .projects-grid {
@@ -550,13 +691,13 @@ body {
   .grid-cols-2 {
     grid-template-columns: 1fr;
   }
-  
+
   .profile-image-container {
     width: 100px;
     height: 100px;
     margin: 0 auto;
   }
-  
+
   .about-content {
     text-align: center;
     align-items: center;
@@ -565,7 +706,7 @@ body {
   .heading {
     font-size: 1.5rem;
   }
-  
+
   .subheading {
     font-size: 1rem;
   }
@@ -574,6 +715,8 @@ body {
     font-size: 0.9rem;
   }
 }
+
+
 
 @media (max-width: 640px) {
   .projects-grid {

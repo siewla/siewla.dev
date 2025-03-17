@@ -2,7 +2,7 @@ import Layout from '@/components/Layout';
 import { FaDownload } from 'react-icons/fa';
 
 export default function Resume() {
-  const summary = `Dynamic Full Stack Developer with a proven track record in software engineering and a comprehensive skill set spanning both frontend and backend technologies. Currently advancing expertise through a Master's in Computer Science while maintaining a successful career in software development. Demonstrates excellence in system optimization, user experience enhancement, and test-driven development practices. Known for effective collaboration in agile environments and consistent delivery of high-impact solutions. Combines technical proficiency with a passion for innovation to create meaningful technological advancements.`;
+  const summary = 'Dynamic Full Stack Developer with a proven track record in software engineering and a comprehensive skill set spanning both frontend and backend technologies. Currently advancing expertise through a Master\'s in Computer Science while maintaining a successful career in software development. Demonstrates excellence in system optimization, user experience enhancement, and test-driven development practices. Known for effective collaboration in agile environments and consistent delivery of high-impact solutions. Combines technical proficiency with a passion for innovation to create meaningful technological advancements.';
 
   const experience = [
     {
